@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up/Log in</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="src/output.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="bg-[#162556]">
+
+    <!-- SIGN UP -->
+
+    <form action="" id="signupForm" class="form flex flex-col gap-[20px] w-fit p-[20px]">
+
+        <h1 class="text-center text-white text-[18px] md:text-[25px] font-bold">Join Us!</h1>
+
+        <div>
+            <input id="userFirstName" type="text" placeholder="First Name" class="p-[10px] pl-[35px] pr-[45px] md:pr-[165px]">
+        </div>
+
+        <div>
+            <input id="userLastName" type="text" placeholder="Last Name" class="p-[10px] pl-[35px] pr-[45px] md:pr-[165px]">
+        </div>
+
+        <div>
+            <input id="userEmail" type="email" placeholder="Email address" class="p-[10px] pl-[35px] pr-[45px] md:pr-[165px]">
+        </div>
+
+        <!-- <div>
+            <input id="userPhoneNumber" type="tel" placeholder="Phone Number">
+        </div> -->
+
+        <div class="flex relative">
+            <input id="passwordInput" type="password" placeholder="Create a password" class="p-[10px] pl-[35px] pr-[45px] md:pr-[165px]">
+
+            <span id="passwordToggle" class=" text-[16px] cursor-pointer">
+                <i class="fa-regular fa-eye"></i>
+                <!-- <i class="fa-regular fa-eye-slash"></i> -->
+            </span>
+        </div>
+
+        <div class="flex relative">
+            <input id="confirmPasswordInput" type="password" placeholder="Confirm password" class="p-[10px] pl-[35px] pr-[45px] md:pr-[165px]">
+
+            <span id="confirmPasswordToggle" class="hidePassword text-[16px] cursor-pointer">
+                <i class="fa-regular fa-eye"></i>
+                <!-- <i class="fa-regular fa-eye-slash"></i> -->
+            </span>
+        </div>
+
+        <button id="registerButton"
+            class="disabled bg-[#ecec40] border-1 border-[#ecec40] hover:text-white font-bold cursor-pointer hover:bg-transparent p-2 rounded-[20px]">Register</button>
+
+        <div>
+            <p class="text-center text-[13px] md:text-[16px]  text-white">Already have an account? <a href=""
+                    class="text-[#ecec40] hover:underline">Log in here</a></p>
+        </div>
+
+    </form>
+
+
+    <!-- SIGN IN -->
+
+
+    <form action="" id="signinForm" class="signInForm flex flex-col gap-[20px] w-fit p-[20px]">
+
+        <div>
+            <h1 class="text-center text-white text-[18px] md:text-[25px] font-bold">Welcome Back!</h1>
+            <p class="text-center text-white text-[12px]">Sign in to continue your account!</p>
+        </div>
+
+        <div class="flex relative items-center">
+            <i class="fa-regular fa-envelope"></i>
+            <input type="email" placeholder="Enter your email address" class="p-[10px] pl-[35px] pr-[45px] md:pr-[165px]">
+        </div>
+
+        <div class="flex relative items-center">
+            <i class="fa-solid fa-key"></i>
+            <input type="password" placeholder="Enter Your Password" class="p-[10px] pl-[35px] pr-[45px] md:pr-[165px]">
+        </div>
+
+        <button
+            class="bg-[#ecec40] border-1 border-[#ecec40] hover:text-white font-bold cursor-pointer hover:bg-transparent p-2 rounded-[20px]">Sign
+            In</button>
+
+        <div>
+            <p class="text-center text-[13px] md:text-[16px] text-white">Don't have an account? <a href=""
+                    class="text-[#ecec40] hover:underline">Sign up here</a></p>
+        </div>
+    </form>
+
+    
+
+    <script src="authen.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

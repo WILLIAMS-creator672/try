@@ -1,0 +1,336 @@
+* {
+    /* padding: 0; */
+    /* margin: 0; */
+    transition: all 0.3s;
+    font-family: Poppins;
+}
+
+
+/* PADDINGS */
+
+.padding {
+    padding: 20px 5vw;
+}
+
+.button-padding {
+    padding: 10px 20px;
+}
+
+.footer-padding {
+    padding: 50px 5vw;
+}
+
+/* BACKGROUNDS */
+
+.hero-image {
+    background-image: url(MEDIA/hero-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: darken;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.logo-background {
+    /* background-image: url(MEDIA/logo.png); */
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.904), rgba(0, 0, 0, 0.801)), url(MEDIA/logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-blend-mode: darken;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    animation: spin 1s infinite;
+}
+
+@keyframes spin {
+    0% {}
+
+    50% {}
+
+    100% {}
+}
+
+.text-color {
+    color: #ecec40;
+}
+
+.center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* box-shadow: 5px 5px 10px gray, -5px -5px 10px gray; */
+    border: 1px solid #ecec40;
+    border-radius: 20px;
+}
+
+.form input {
+    outline: none;
+    border: 1px solid white;
+    border-radius: 10px;
+    color: white;
+}
+
+.form input:focus {
+    border: 1px solid #ecec40;
+}
+
+
+.form i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+.form input::placeholder {
+    color: #888;
+}
+
+.signInForm {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* box-shadow: 5px 5px 10px gray, -5px -5px 10px gray; */
+    border: 1px solid #ecec40;
+    border-radius: 20px;
+}
+
+.signInForm i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    /* color: white; */
+}
+
+.signInForm input {
+    outline: none;
+    border: 1px solid white;
+    border-radius: 10px;
+    color: white;
+}
+
+.signInForm input:focus {
+    border: 1px solid #ecec40;
+}
+
+
+.signInForm input::placeholder {
+    color: #888;
+}
+
+.active {
+    cursor: pointer;
+}
+
+.disabled {
+    background-color: #0f1c47;
+    cursor: not-allowed;
+    opacity: 0.7;
+    border: 1px solid #0f1c47;
+    pointer-events: none;
+    color: grey;
+}
+
+/* MODALS */
+
+.modalWrapper {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+.centerModal {
+    transform-origin: center center;
+    box-shadow: 2px 2px 5px rgb(70, 69, 69), -2px -2px 5px rgb(85, 84, 84);
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: fit-content;
+}
+
+.errorModal {
+    position: fixed;
+    left: 20px;
+    /* top: 50%; */
+    bottom: 10px;
+    background-color: white;
+    color: red;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.errorModalRemove {
+    position: fixed;
+    left: -200px;
+
+    bottom: 10px;
+background-color: white;
+    color: red;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 40;
+}
+
+.hamburgerOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    /* background-color: rgba(0, 0, 0, 0.8); */
+
+}
+
+.section-two {
+    margin-top: 50px;
+}
+
+.section-two img {
+    border-radius: 5px;
+}
+
+.programmeDivs {}
+
+.programmeDivs div {
+    box-shadow: 5px 5px 10px gray, -5px -5px 10px gray;
+    padding: 20px 40px;
+    border-radius: 20px;
+}
+
+.programmeDivs button {
+    background-color: #FC0000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.programmeDivs button:hover {
+    background-color: #b61818;
+}
+
+/* BOX SHADOW */
+
+.box-shadow{
+    box-shadow: 2px 2px 5px rgb(70, 69, 69), -2px -2px 5px rgb(85, 84, 84);
+}
+
+/* TYPING EFFECT */
+
+.typingText {
+    /* border: 2px solid white; */
+    /* color: gold; */
+    /* font-size: 55px; */
+    /* font-weight: bold; */
+    border-right: 1px solid #ecec40;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    animation: typing 3s steps(25) forwards, blink 1s infinite;
+
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+
+    }
+
+    100% {
+        width: 630px;
+    }
+
+
+}
+
+@media screen and (max-width: 768px) {
+
+    @keyframes typing {
+        0% {
+            width: 0;
+        }
+
+        100% {
+            width: 300px;
+        }
+    }
+}
+
+@keyframes blink {
+    from {
+        border-color: transparent;
+    }
+
+    to {
+        border-color: gold;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .sec-one .heading h1 {
+        font-size: 30px;
+    }
+}
+
+
+
+/* .programme-card {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.left-card {
+    transform: translateX(-200px);
+}
+
+.left-card.in-view {
+    transform: translateX(0);
+}
+
+.bottom-card {
+    transform: translateY(200px);
+}
+
+.bottom-card.in-view {
+    transform: translateY(0);
+}
+
+.right-card {
+    transform: translateX(200px);
+}
+
+.right-card.in-view {
+    transform: translateX(0);
+}
+ */
