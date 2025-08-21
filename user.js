@@ -84,6 +84,53 @@ function displayNotReadyError(event){
 }
 
 
+// Profile Picture Upload
+const fileInput = document.getElementById('file-upload');
+const profileImg = document.querySelector('.dp');
+
+fileInput.addEventListener('change', function () {
+    const file = this.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            let newDp = e.target.result;
+            profileImg.src = newDp;
+            localStorage.setItem('newdp', newDp);
+        };
+        reader.readAsDataURL(file);
+    }
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+    // let savedName = localStorage.getItem('profileName');
+    // let savedOccupation = localStorage.getItem('occupation');
+    // let savedBio = localStorage.getItem('newbio');
+    let savedDp = localStorage.getItem('newdp');
+
+    // const profileCard = document.getElementById('card');
+    // const form = document.getElementById('form');
+    // const profileName = document.getElementById('profile-name');
+    // const profileOccupation = document.getElementById('occupation-text');
+    // const bioText = document.getElementById('bio-text');
+    const profileImg = document.querySelector('.dp');
+
+    // if (savedName && savedOccupation) {
+    //     form.style.display = 'none';
+    //     profileCard.style.display = 'block';
+
+    //     profileName.innerText = savedName;
+    //     profileOccupation.innerText = savedOccupation;
+    // }
+
+    // if (savedBio) {
+    //     bioText.innerText = savedBio;
+    // }
+
+    if (savedDp) {
+        profileImg.src = savedDp;
+    }
+});
+
 
 // LOG OUT
 

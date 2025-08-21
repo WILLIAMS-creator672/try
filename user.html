@@ -35,9 +35,20 @@
             <div
                 class="box-shadow padding border flex flex-col md:flex-row items-center justify-around gap-[20px] md:gap-[5px] rounded-[10px]">
 
-                <div class="dp-card" id="dp-card">
-                    <img src="MEDIA/no-dp.jpeg" alt="" class="dp">
-                </div>
+            <div class="flex flex-col gap-[10px] items-center">
+                    <div class="dp-card" id="dp-card">
+                        <img src="MEDIA/no-dp.jpeg" alt="" class="dp">
+                    
+                    
+                    </div>
+                    
+                    <div>
+                        <label for="file-upload" class="dp-upload">
+                            <i class="fa-solid fa-camera"></i> Upload Photo
+                        </label>
+                        <input id="file-upload" type="file"/>
+                    </div>
+            </div>
 
                 <div
                     class="flex flex-col items-center rounded-[10px] text-white md:text-black gap-[5px] md:gap-[10px] bg-[#162556] md:bg-transparent w-full md:w-fit p-[5px]">
@@ -91,11 +102,10 @@
         <!-- MODALS -->
 
         <div id="accountModal" class="account-modal px-[50px] py-[25px] text-[18px] scale-0">
-          <div title="Close" class="flex justify-end gap-[20px]">
-            <p class="text-center">User Information</p>
-                <i 
-                    class="fa-solid fa-xmark cursor-pointer text-[13px] md:text-[18px] text-[#FC0000]"></i>
-          </div><br>
+            <div title="Close" class="flex justify-end gap-[20px]">
+                <p class="text-center">User Information</p>
+                <i class="fa-solid fa-xmark cursor-pointer text-[13px] md:text-[18px] text-[#FC0000]"></i>
+            </div><br>
 
             <div>
                 <i class="font-bold">Name</i>
@@ -107,10 +117,10 @@
                 <p></p>
             </div> <br>
 
-                <div>
-                    <i class="font-bold">Phone Number</i>
-                    <p></p>
-                </div>
+            <div>
+                <i class="font-bold">Phone Number</i>
+                <p></p>
+            </div>
         </div>
 
     </main>
