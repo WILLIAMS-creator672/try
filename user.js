@@ -46,6 +46,55 @@ overlayTwo.addEventListener('click', () => {
     overlayTwo.classList.add('hidden')
 })
 
+closeAccountModal.addEventListener('click', () => {
+    accountModal.classList.add('scale-0')
+    overlayTwo.classList.add('hidden')
+})
+
+
+// NOT READY ERROR - COMING SOON
+
+let notReadyError = document.getElementById('notReadyError')
+
+let accountCard = document.getElementById('accountCard')
+
+let accountSettingsButton = accountCard.querySelectorAll('button')[1]
+
+let accountCustomerServiceButton = accountCard.querySelectorAll('button')[2]
+
+let accountBBshopButton = accountCard.querySelectorAll('button')[3]
+
+accountSettingsButton.addEventListener('click', displayNotReadyError)
+
+accountCustomerServiceButton.addEventListener('click', displayNotReadyError)
+
+accountBBshopButton.addEventListener('click', displayNotReadyError)
+
+
+
+function displayNotReadyError(event){
+    event.preventDefault()
+    notReadyError.classList.remove('opacity-0');
+    notReadyError.innerHTML = '<i class="fa-solid fa-circle-exclamation"></i> Coming Soon.....';
+
+    setTimeout(() => {
+        notReadyError.classList.add('opacity-0');
+        notReadyError.innerText = '';
+    }, 3000);
+}
+
+
+
+// LOG OUT
+
+let accountModalLogoutButton = document.getElementById('accountModalLogOut')
+
+
+
+accountModalLogoutButton.addEventListener('click', logout)
+
+
+
 
 
 

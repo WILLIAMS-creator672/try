@@ -5,6 +5,19 @@
     font-family: Poppins;
 }
 
+.active {
+    cursor: pointer;
+}
+
+.disabled {
+    background-color: #0f1c47;
+    cursor: not-allowed;
+    opacity: 0.7;
+    border: 1px solid #0f1c47;
+    pointer-events: none;
+    color: grey;
+}
+
 .dp-card {
     width: fit-content;
     border: 2px solid grey;
@@ -45,7 +58,7 @@
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 1000;
-    box-shadow: 2px 2px 5px rgb(70, 69, 69), -2px -2px 5px rgb(85, 84, 84);
+    box-shadow: 2px 2px 5px #162556, -2px -2px 5px #162556;
     background: white;
     /* padding: 30px; */
     border-radius: 10px;
@@ -75,4 +88,29 @@
     width: 100vw;
     /* background-color: rgba(0, 0, 0, 0.8); */
 
+}
+
+/* ERRORS */
+
+.loginErrorModal {
+    position: fixed;
+    top: 20px;
+    /* top: 50%; */
+    left: 50%;
+    background-color: white;
+    color: red;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.notReadyErrModal {
+    position: fixed;
+    left: 20px;
+    /* top: 50%; */
+    bottom: 10px;
+    background-color: white;
+    color: red;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #162556, -2px -2px 5px #162556;
 }

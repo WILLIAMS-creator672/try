@@ -134,6 +134,9 @@ let headerUserName = userAccountDiv.querySelector('p')
 
 
 
+
+
+
 let getSavedData = {
     savedData: localStorage.getItem('signUpFormData')
 
@@ -156,11 +159,10 @@ function showSpecialButtonIfAllowed() {
 
         if (isMediumScreen) {
             headerUserButton.classList.remove('hidden');
-          
+            hamburgerLogOutButon.classList.remove('hidden')
         } else {
             headerUserButton.classList.add('hidden');
-            
-
+            // hamburgerLogOutButon.classList.add('hidden')
         }
 
     } else {
@@ -168,6 +170,8 @@ function showSpecialButtonIfAllowed() {
         headerUserButton.classList.add('hidden');
 
         hamburgerButtonContainer.classList.remove('hidden');
+
+        hamburgerLogOutButon.classList.add('hidden')
     }
 
 }
@@ -177,12 +181,12 @@ window.addEventListener('DOMContentLoaded', showSpecialButtonIfAllowed);
 window.addEventListener('resize', showSpecialButtonIfAllowed);
 
 
-headerUserButton.onclick = function(){
+headerUserButton.onclick = function () {
     showUserAccountDiv()
 }
 
 function showUserAccountDiv() {
-    userAccountDiv.classList.toggle('-translate-y-[400px]')
+    userAccountDiv.classList.toggle('-translate-y-[600px]')
 }
 
 // REDIRECT TO SIGN UP PAGE
@@ -198,6 +202,10 @@ headerSignUpLink.addEventListener('click', () => {
 // ERRORS
 
 let getStartedError = document.getElementById('getStartedError');
+
+let navBrigadeShopLink = document.getElementById('navBrigadeShopLink')
+
+let headerHelpLink = document.getElementById('headerHelpLink')
 
 getStartedButton.addEventListener('click', () => {
     if (savedData) {
@@ -216,8 +224,45 @@ getStartedButton.addEventListener('click', () => {
 
 });
 
+navBrigadeShopLink.addEventListener('click', (event) => {
+    event.preventDefault()
+    getStartedError.classList.remove('opacity-0');
+    getStartedError.innerHTML = '<i class="fa-solid fa-circle-exclamation"></i> Coming Soon.....';
 
-console.log(savedData);
+    setTimeout(() => {
+        getStartedError.classList.add('opacity-0');
+        getStartedError.innerText = '';
+    }, 3000);
+
+})
+
+headerHelpLink.addEventListener('click', (event) => {
+    event.preventDefault()
+    getStartedError.classList.remove('opacity-0');
+    getStartedError.innerHTML = '<i class="fa-solid fa-circle-exclamation"></i> Coming Soon.....';
+
+    setTimeout(() => {
+        getStartedError.classList.add('opacity-0');
+        getStartedError.innerText = '';
+    }, 3000);
+
+})
+
+
+
+// LOG OUT
+
+let headerLogOutButton = document.getElementById('headerLogOut')
+let hamburgerLogOutButon = mobileNav.querySelectorAll('button')[2]
+
+headerLogOutButton.addEventListener('click', logout)
+hamburgerLogOutButon.addEventListener('click', logout)
+
+function logout() {
+    localStorage.removeItem('isLoggedIn');
+    window.location.href = 'authen.html';
+}
+
 
 
 

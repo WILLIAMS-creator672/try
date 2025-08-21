@@ -70,23 +70,23 @@
         <!-- NAV -->
 
         <nav id="navBar"
-            class="paddin p-[40px] z-30 bg-black font-bold text-[16px] list-none w-fit md:w-full h-screen md:h-fit flex flex-col text-white gap-[50px] md:flex md:flex-row fixed top-0 md:static  -left-100">
+            class="paddin p-[40px] z-30 bg-black font-bold text-[16px] list-none w-fit md:w-full h-screen md:h-fit flex flex-col text-white gap-[40px] md:flex md:flex-row fixed top-0 md:static  -left-100">
 
             <img src="MEDIA/logo.png" alt="logo" class="h-10 md:h-20 w-10 md:w-20 flex md:hidden">
 
             <a href="" class="hover:text-[#FEFE00]">
                 <li>Home</li>
             </a>
-            <a href="" class="hover:text-[#FEFE00]">
+            <a href="#programmesSection" class="hover:text-[#FEFE00]">
                 <li>Programmes</li>
             </a>
-            <a href="" class="hover:text-[#FEFE00]">
+            <a href="" id="navBrigadeShopLink" class="hover:text-[#FEFE00]">
                 <li>Brigade Shop</li>
             </a>
             <a href="" class="hover:text-[#FEFE00]">
                 <li>About Us</li>
             </a>
-            <a href="" class="hover:text-[#FEFE00]">
+            <a href="#footer" class="hover:text-[#FEFE00]">
                 <li>Contact Us</li>
             </a>
 
@@ -101,11 +101,23 @@
                     IN</button>
             </div>
 
-            <div title="Account" id="hamburgerUserButton"
-                class="cursor-pointer flex items-center gap-[50px] md:hidden group">
+            <a href="user.html">
+                <div title="Account" id="hamburgerUserButton"
+                    class="cursor-pointer flex items-center gap-[50px] md:hidden group">
 
 
-                <p id="hamburgerUsername" class="font-medium group-hover:text-[#FEFE00]"></p>
+                    <p id="hamburgerUsername" class="font-medium group-hover:text-[#FEFE00]"></p>
+                </div>
+            </a>
+
+            <div>
+                <button  class="ont-medium text-[#FC0000] cursor-pointer">
+                
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                
+                    <!-- &nbsp; -->
+                    Log out
+                </button>
             </div>
 
         </nav>
@@ -135,7 +147,7 @@
 
         <!-- SECTION TWO - PROGRAMMES -->
 
-        <section class="section-two padding flex flex-col items-center gap-[50px]">
+        <section id="programmesSection" class="section-two padding flex flex-col items-center gap-[50px]">
 
             <h1 class="text-[20px] md:text-[30px] font-bold">OUR PROGRAMMES</h1>
 
@@ -206,7 +218,7 @@
 
         <!-- FOOTER -->
 
-        <footer class="footer-padding bg-[#162556]">
+        <footer id="footer" class="footer-padding bg-[#162556]">
 
             <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-[80px] md:gap-[5px]">
 
@@ -309,22 +321,24 @@
 
         <!-- USER ACCOUNT DIV -->
         <div id="userAccountDiv"
-            class="box-shadow flex flex-col items-center gap-[20px] z-100 rounded-[10px] absolute top-[100px] p-[20px] right-[50px] transform -translate-y-[400px] bg-black">
+            class="box-shadow flex flex-col items-center gap-[20px] z-100 rounded-[10px] fixed top-[100px] p-[20px] right-[50px] transform -translate-y-[600px] bg-black">
 
             <div title="Account" class="flex gap-[5px] items-center text-[15px] md:text-[18px] cursor-pointer group">
                 <i class="fa-solid fa-user text-[#FEFE00] text-[18px]"></i>
 
-                <a href="user.html"><p class="font-medium text-white group-hover:text-[#FEFE00]"></p></a>
+                <a href="user.html">
+                    <p class="font-medium text-white group-hover:text-[#FEFE00]"></p>
+                </a>
             </div>
 
             <ul class="flex flex-col gap-[20px]">
-                <a href="" class="ont-medium text-white hover:text-[#FEFE00]"><i class="fa-solid fa-headset"></i> Help
+                <a href="" id="headerHelpLink" class="ont-medium text-white hover:text-[#FEFE00]"><i class="fa-solid fa-headset"></i> Help
                     and support</a>
 
                 <!-- <a href="" class="ont-medium text-white hover:text-[#FEFE00]"><i class="fa-solid fa-headset"></i> Help
                     and support</a> -->
 
-                <button class="ont-medium text-[#FC0000] cursor-pointer">
+                <button id="headerLogOut" class="ont-medium text-[#FC0000] cursor-pointer">
 
                     <i class="fa-solid fa-arrow-right-from-bracket"></i>
 

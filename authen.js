@@ -119,3 +119,46 @@ signupForm.addEventListener('submit', (event) => {
 
 
 })
+
+
+// LOG IN
+
+let loginForm = document.getElementById('signinForm');
+let loginEmailInput = document.getElementById('logInEmail');
+let loginPasswordInput = document.getElementById('logInPassword');
+let logInButton = document.getElementById('logInButton');
+
+
+let logInError = document.getElementById('logInError');
+
+// Fetch stored user data once
+let storedUserData = JSON.parse(localStorage.getItem('signUpFormData'));
+
+
+loginForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    let email = loginEmailInput.value.trim();
+    let password = loginPasswordInput.value;
+
+    let userData = JSON.parse(localStorage.getItem('signUpFormData'));
+
+    if (userData) {
+        if (email === userData.email && password === userData.password) {
+            localStorage.setItem('isLoggedIn', 'true');
+            localStorage.setItem('currentUser', JSON.stringify(userData));
+
+            window.location.href = 'index.html';
+        } else {
+            logInError.classList.remove('opacity-0');
+            logInError.innerHTML = '<i class="fa-solid fa-circle-exclamation"></i> Wrong Credentials';
+
+            setTimeout(() => {
+                logInError.classList.add('opacity-0');
+                logInError.innerText = '';
+            }, 3000);
+        }
+    } else {
+        alert('No user found. Please sign up first.');
+    }
+});

@@ -21,6 +21,14 @@
 <body class="bg-[#162556]">
 
   
+    <div class="flex flex-col gap-[10px] items-center w-fit m-[20px]">
+        <div class="flex items-center gap-[10px]">
+            <img src="MEDIA/logo.png" alt="logo" class="h-5 md:h-10 w-5 md:w-10 ">
+            <h1 class=" text-[#FEFE00] text-[20px] font-bold">BBNAKSC</h1>
+        </div>
+    
+    
+    </div>
 
     <!-- SIGN UP -->
 
@@ -85,15 +93,15 @@
 
         <div class="flex relative items-center">
             <i class="fa-regular fa-envelope"></i>
-            <input type="email" placeholder="Enter your email address" class="p-[10px] pl-[35px] pr-[45px] md:pr-[165px]">
+            <input id="logInEmail" type="email" placeholder="Enter your email address" class="p-[10px] pl-[35px] pr-[45px] md:pr-[165px]">
         </div>
 
         <div class="flex relative items-center">
             <i class="fa-solid fa-key"></i>
-            <input type="password" placeholder="Enter Your Password" class="p-[10px] pl-[35px] pr-[45px] md:pr-[165px]">
+            <input id="logInPassword" type="password" placeholder="Enter Your Password" class="p-[10px] pl-[35px] pr-[45px] md:pr-[165px]">
         </div>
 
-        <button
+        <button id="logInButton"
             class="bg-[#ecec40] border-1 border-[#ecec40] hover:text-white font-bold cursor-pointer hover:bg-transparent p-2 rounded-[20px]">Sign
             In</button>
 
@@ -102,6 +110,11 @@
                     class="text-[#ecec40] hover:underline">Sign up here</a></p>
         </div>
     </form>
+
+
+    <!-- AUTHEN ERRORS -->
+
+    <p id="logInError" class="loginErrorModal opacity-0 text-[15px] md:text-[18px]"></p>
 
     
 

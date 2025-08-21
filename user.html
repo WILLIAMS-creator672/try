@@ -21,7 +21,7 @@
     <title>Brigade - User Dashboard</title>
 </head>
 
-<body>
+<body class="">
 
     <main>
         <section class="padding flex flex-col gap-[20px]">
@@ -48,7 +48,7 @@
             </div>
 
 
-            <div class="account-card box-shadow padding rounded-[10px]">
+            <div id="accountCard" class="account-card box-shadow padding rounded-[10px]">
                 <ul>
                     <li><button id="accountDetails" class="w-full">
                             <p><i class="fa-solid fa-user text-neutral-500"></i> &nbsp; Account Details</p>
@@ -79,7 +79,7 @@
                         </button>
                     </li>
 
-                    <li><button class="w-full font-bold  text-[#FC0000]">
+                    <li><button id="accountModalLogOut" class="w-full font-bold  text-[#FC0000]">
                             <p><i class="fa-solid fa-arrow-right-from-bracket"></i> &nbsp; Log Out</p>
                             <i class="fa-solid fa-angle-right"></i>
                         </button>
@@ -116,6 +116,11 @@
     </main>
 
 
+    <!-- ERRORS -->
+
+    <p id="notReadyError" class="notReadyErrModal opacity-0 text-[15px] md:text-[18px]"></p>
+
+
     <!-- OVERLAYS -->
 
     <div id="hamburgerOverlay-2" class="hamburgerOverlay hidden"></div>
@@ -126,6 +131,7 @@
     <script src="script.js"></script>
     <script src="authen.js"></script>
     <script src="user.js"></script>
+    <script src="logout.js"></script>
 </body>
 
 </html>
