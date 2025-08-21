@@ -38,10 +38,12 @@
             <!-- SIGN UP/IN BUTTON DIV - MD AND ABOVE SCREENS-->
 
             <div id="headerSignLogDiv" class="gap-[30px] text-[12px] font-bold">
-                <button id="signUp"
+                <button  id="signUp"
                     class="cursor-pointer border-2 p-2 px-[20px] rounded-[10px] text-white border-[#FEFE00] hover:text-black hover:border-white hover:bg-white">SIGN
                     UP</button>
-                <button id="LogIn"
+                <button onclick="
+                    window.location.href = 'authen.html'
+                    " id="LogIn"
                     class="cursor-pointer bg-[#FEFE00] p-2 px-[20px] rounded-[10px] hover:bg-transparent border-2 border-[#FEFE00] hover:border-[#FEFE00] hover:text-white">LOG
                     IN</button>
 
@@ -96,7 +98,9 @@
                 <button id="hamburgerSignUp"
                     class="cursor-pointer border-2 p-2 px-[20px] rounded-[10px] text-white border-[#FEFE00] hover:text-black hover:border-white hover:bg-white">SIGN
                     UP</button>
-                <button id="hamburgerlogIn"
+                <button onclick="
+                    window.location.href = 'authen.html'
+                    " id="hamburgerlogIn"
                     class="cursor-pointer bg-[#FEFE00] p-2 px-[20px] rounded-[10px] text-black hover:bg-transparent border-2 border-[#FEFE00] hover:border-[#FEFE00] hover:text-white">LOG
                     IN</button>
             </div>
@@ -316,7 +320,7 @@
         <!-- ERROR MESSAGES -->
 
 
-        <p id="getStartedError" class="errorModal opacity-0 z-50 text-[15px] md:text-[18px]"></p>
+        <p id="getStartedError" class="errorModal opacity-0 text-[15px] md:text-[18px]"></p>
 
 
         <!-- USER ACCOUNT DIV -->
