@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="user.css">
+    <link rel="stylesheet" href="src/output.css">
+    <link rel="icon" href="MEDIA/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+    <title>Brigade - User Dashboard</title>
+</head>
+
+<body>
+
+    <main>
+        <section class="padding flex flex-col gap-[20px]">
+
+            <div title="Go Back" id="goBackButton" class="flex items-center justify-start">
+                <a href="index.html"><i class="fa-solid fa-angle-left cursor-pointer"></i></a>
+                <p class="w-fit m-auto text-[18px] md:text-[22px]">Account</p>
+            </div> <br>
+
+
+            <div
+                class="box-shadow padding border flex flex-col md:flex-row items-center justify-around gap-[20px] md:gap-[5px] rounded-[10px]">
+
+                <div class="dp-card" id="dp-card">
+                    <img src="MEDIA/no-dp.jpeg" alt="" class="dp">
+                </div>
+
+                <div
+                    class="flex flex-col items-center rounded-[10px] text-white md:text-black gap-[5px] md:gap-[10px] bg-[#162556] md:bg-transparent w-full md:w-fit p-[5px]">
+                    <p id="accountFullName" class="font-bold text-[18px] md:text-[22px]"></p>
+
+                    <p id="accountEmail"></p>
+                </div>
+            </div>
+
+
+            <div class="account-card box-shadow padding rounded-[10px]">
+                <ul>
+                    <li><button id="accountDetails" class="w-full">
+                            <p><i class="fa-solid fa-user text-neutral-500"></i> &nbsp; Account Details</p>
+                            <i class="fa-solid fa-angle-right"></i>
+                        </button>
+                    </li>
+                    <li><button class="w-full">
+                            <p><i class="fa-solid fa-gear text-neutral-500"></i> &nbsp; Settings</p>
+                            <i class="fa-solid fa-angle-right"></i>
+                        </button></li>
+                    <li><button class="w-full">
+                            <p><i class="fa-solid fa-headset text-neutral-500"></i> &nbsp; Customer Service</p>
+                            <i class="fa-solid fa-angle-right"></i>
+                        </button></li>
+                    <li><button class="w-full">
+                            <p><i class="fa-solid fa-shop text-neutral-500"></i> &nbsp; BB Shop</p>
+                            <i class="fa-solid fa-angle-right"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="account-card box-shadow padding rounded-[10px]">
+                <ul>
+                    <li><button class="w-full">
+                            <p><i class="fa-solid fa-circle-exclamation text-neutral-500"></i> &nbsp; About</p>
+                            <i class="fa-solid fa-angle-right"></i>
+                        </button>
+                    </li>
+
+                    <li><button class="w-full font-bold  text-[#FC0000]">
+                            <p><i class="fa-solid fa-arrow-right-from-bracket"></i> &nbsp; Log Out</p>
+                            <i class="fa-solid fa-angle-right"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- MODALS -->
+
+        <div id="accountModal" class="account-modal px-[50px] py-[25px] text-[18px] scale-0">
+          <div title="Close" class="flex justify-end gap-[20px]">
+            <p class="text-center">User Information</p>
+                <i 
+                    class="fa-solid fa-xmark cursor-pointer text-[13px] md:text-[18px] text-[#FC0000]"></i>
+          </div><br>
+
+            <div>
+                <i class="font-bold">Name</i>
+                <p></p>
+            </div> <br>
+
+            <div>
+                <i class="font-bold">Email</i>
+                <p></p>
+            </div> <br>
+
+                <div>
+                    <i class="font-bold">Phone Number</i>
+                    <p></p>
+                </div>
+        </div>
+
+    </main>
+
+
+    <!-- OVERLAYS -->
+
+    <div id="hamburgerOverlay-2" class="hamburgerOverlay hidden"></div>
+    <div id="overlay-2" class="hidden"></div>
+
+
+
+    <script src="script.js"></script>
+    <script src="authen.js"></script>
+    <script src="user.js"></script>
+</body>
+
+</html>

@@ -136,6 +136,7 @@ let headerUserName = userAccountDiv.querySelector('p')
 
 let getSavedData = {
     savedData: localStorage.getItem('signUpFormData')
+
 }
 
 let { savedData } = getSavedData
@@ -146,7 +147,7 @@ function showSpecialButtonIfAllowed() {
         let parsedData = JSON.parse(savedData);
         headerButtonContainer.classList.add('hidden')
         hamburgerButtonContainer.classList.add('hidden');
-        hamburgerUserName.innerHTML = `<i class="fa-solid fa-user text-[#FEFE00] text-[18px]"></i>${parsedData.fullName}`
+        hamburgerUserName.innerHTML = `<i class="fa-solid fa-user text-[#FEFE00] text-[18px]"></i> &nbsp; ${parsedData.fullName}`
         headerUserName.innerText = parsedData.fullName
 
         // USER ACCOUNT BUTTON RESPONSIVENESS
@@ -155,13 +156,14 @@ function showSpecialButtonIfAllowed() {
 
         if (isMediumScreen) {
             headerUserButton.classList.remove('hidden');
+          
         } else {
             headerUserButton.classList.add('hidden');
+            
+
         }
 
     } else {
-
-        headerButtonContainer.classList.remove('hidden')
 
         headerUserButton.classList.add('hidden');
 
@@ -213,6 +215,9 @@ getStartedButton.addEventListener('click', () => {
     }
 
 });
+
+
+console.log(savedData);
 
 
 

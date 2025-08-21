@@ -1,0 +1,78 @@
+* {
+    /* padding: 0; */
+    /* margin: 0; */
+    transition: all 0.3s;
+    font-family: Poppins;
+}
+
+.dp-card {
+    width: fit-content;
+    border: 2px solid grey;
+    border-radius: 50%;
+}
+
+.dp {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
+
+.account-card {
+    
+}
+
+.account-card ul{
+    display: flex;
+        flex-flow: column;
+        gap: 20px;
+}
+
+.account-card button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #162556;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.account-modal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    box-shadow: 2px 2px 5px rgb(70, 69, 69), -2px -2px 5px rgb(85, 84, 84);
+    background: white;
+    /* padding: 30px; */
+    border-radius: 10px;
+}
+
+
+
+
+
+/* OVERLAYS */
+
+#overlay-2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 40;
+}
+
+.hamburgerOverlay-2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    /* background-color: rgba(0, 0, 0, 0.8); */
+
+}

@@ -32,9 +32,7 @@ signupNavigateLink.onclick = function (event) {
 let firstNameInput = document.getElementById('userFirstName')
 let lastNameInput = document.getElementById('userLastName')
 let emailInput = document.getElementById('userEmail')
-// let telInput = document.getElementById('userPhoneNumber')
-// let passwordInput = document.getElementById('password')
-// let confirmPasswordInput = document.getElementById('confirmPassworddd')
+let telInput = document.getElementById('userPhoneNumber')
 let passwordInput = document.getElementById('passwordInput')
 let confirmPasswordInput = document.getElementById('confirmPasswordInput')
 let registerButton = document.getElementById('registerButton')
@@ -70,6 +68,7 @@ signupForm.addEventListener('input', function () {
     if (!firstNameInput.value.trim()) valid = false;
     if (!lastNameInput.value.trim()) valid = false;
     if (!emailInput.value.includes('@')) valid = false;
+    if (!telInput.value.match(/^\d{11}$/)) valid = false;
     if (!passwordInput.value.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{4,}$/)) valid = false;
     if (confirmPasswordInput.value !== passwordInput.value) valid = false;
 
@@ -90,6 +89,7 @@ signupForm.addEventListener('submit', (event) => {
     let lastName = lastNameInput.value
     let fullName = firstName + ' ' + lastName
     let email = emailInput.value
+    let phoneNumber = telInput.value
     let password = passwordInput.value
 
     let userData = {
@@ -97,6 +97,7 @@ signupForm.addEventListener('submit', (event) => {
         lastName: lastName,
         fullName: fullName,
         email: email,
+        phoneNumber: phoneNumber,
         password: password
     }
 

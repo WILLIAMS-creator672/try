@@ -1,0 +1,52 @@
+let accountFullName = document.getElementById('accountFullName')
+let accountEmail = document.getElementById('accountEmail')
+let parsedData;  // Declare globally
+
+
+
+// ACCOUNT MODAL
+
+let accountModal = document.getElementById('accountModal')
+let userFullName = accountModal.querySelectorAll('p')[1]
+let userEmail = accountModal.querySelectorAll('p')[2]
+let userPhoneNumber = accountModal.querySelectorAll('p')[3]
+
+
+window.addEventListener('DOMContentLoaded', () => {
+    const savedData = localStorage.getItem('signUpFormData');
+
+    if (savedData) {
+        parsedData = JSON.parse(savedData);
+
+        accountFullName.innerHTML = `<i class="fa-solid fa-user text-whiite md:text-neutral-500"></i> ${parsedData.fullName}`;
+        accountEmail.innerHTML = `<i class="fa-solid fa-envelope text-white md:text-neutral-500"></i> ${parsedData.email}`;
+
+        userFullName.innerHTML = parsedData.fullName
+        userEmail.innerHTML = parsedData.email
+        userPhoneNumber.innerHTML = parsedData.phoneNumber
+    }
+});
+
+
+let accountDetailsButton = document.getElementById('accountDetails')
+
+let overlayTwo = document.getElementById('overlay-2')
+let hamburgerOverlayTwo = document.getElementById('hamburgerOverlay-2')
+let closeAccountModal = accountModal.querySelector('i')
+
+
+
+accountDetailsButton.addEventListener('click', () => {
+    accountModal.classList.remove('scale-0')
+    overlayTwo.classList.remove('hidden')
+})
+
+overlayTwo.addEventListener('click', () => {
+    accountModal.classList.add('scale-0')
+    overlayTwo.classList.add('hidden')
+})
+
+
+
+
+

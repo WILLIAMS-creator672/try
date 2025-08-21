@@ -168,6 +168,7 @@
     width: fit-content;
 }
 
+
 .errorModal {
     position: fixed;
     left: 20px;
@@ -184,7 +185,7 @@
     left: -200px;
 
     bottom: 10px;
-background-color: white;
+    background-color: white;
     color: red;
     padding: 10px;
     border-radius: 10px;
@@ -243,7 +244,7 @@ background-color: white;
 
 /* BOX SHADOW */
 
-.box-shadow{
+.box-shadow {
     box-shadow: 2px 2px 5px rgb(70, 69, 69), -2px -2px 5px rgb(85, 84, 84);
 }
 
