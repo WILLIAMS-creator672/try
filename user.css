@@ -130,9 +130,9 @@ input[type="file"] {
 
 .photoUploadSuccesModal{
     position: fixed;
-        left: 20px;
-        /* top: 50%; */
-        bottom: 10px;
+        left: 40%;
+        top: 30px;
+        /* bottom: 10px; */
         background-color: white;
         color: #162556;
         padding: 10px;
