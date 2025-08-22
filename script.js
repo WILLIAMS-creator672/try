@@ -71,12 +71,11 @@ overlay.addEventListener('click', () => {
 
 
 
+// REDIRECT TO ABOUT PAGE
 
-let redirectToAbout = document.getElementById('aboutUsButton')
-
-redirectToAbout.addEventListener('click', () => {
-    window.location.href = 'about.html'
-})
+// redirectToAbout.addEventListener('click', () => {
+//     window.location.href = 'about.html'
+// })
 
 
 // FOOTER DATE
@@ -205,6 +204,8 @@ let getStartedError = document.getElementById('getStartedError');
 
 let navBrigadeShopLink = document.getElementById('navBrigadeShopLink')
 
+let navAboutUsLink = document.getElementById('navAboutUs')
+
 let headerHelpLink = document.getElementById('headerHelpLink')
 
 getStartedButton.addEventListener('click', () => {
@@ -224,7 +225,21 @@ getStartedButton.addEventListener('click', () => {
 
 });
 
+// COMING SOON
+
+
+let redirectToAbout = document.getElementById('aboutUsButton')
+
+let footerAboutUsLink = document.getElementById('footerAboutUs')
+
+footerAboutUsLink.addEventListener('click', showComingSoon)
+
 navBrigadeShopLink.addEventListener('click', showComingSoon)
+
+navAboutUsLink.addEventListener('click', showComingSoon)
+
+
+redirectToAbout.addEventListener('click', showComingSoon)
 
 headerHelpLink.addEventListener('click', showComingSoon)
 

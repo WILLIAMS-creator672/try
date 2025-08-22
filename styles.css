@@ -328,6 +328,20 @@
     }
 }
 
+.historyCard{
+/* list-style-type: circle; */
+}
+
+
+.historyCard li{
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    
+}
+
 
 
 /* .programme-card {
