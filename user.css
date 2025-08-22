@@ -127,3 +127,19 @@ input[type="file"] {
     border-radius: 10px;
     box-shadow: 2px 2px 5px #162556, -2px -2px 5px #162556;
 }
+
+.photoUploadSuccesModal{
+    position: fixed;
+        left: 20px;
+        /* top: 50%; */
+        bottom: 10px;
+        background-color: white;
+        color: #162556;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 5px #162556, -2px -2px 5px #162556;
+}
+
+.account-card-bg{
+    background-color: #1d3170;
+}

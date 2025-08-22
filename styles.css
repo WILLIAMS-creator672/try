@@ -67,7 +67,7 @@
     top: 50%;
     transform: translate(-50%, -50%);
     /* box-shadow: 5px 5px 10px gray, -5px -5px 10px gray; */
-    border: 1px solid #ecec40;
+    /* border: 1px solid #ecec40; */
     border-radius: 20px;
 }
 
@@ -101,7 +101,7 @@
     top: 50%;
     transform: translate(-50%, -50%);
     /* box-shadow: 5px 5px 10px gray, -5px -5px 10px gray; */
-    border: 1px solid #ecec40;
+    /* border: 1px solid #ecec40; */
     border-radius: 20px;
 }
 

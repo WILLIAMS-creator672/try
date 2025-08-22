@@ -18,8 +18,8 @@ window.addEventListener('DOMContentLoaded', () => {
     if (savedData) {
         parsedData = JSON.parse(savedData);
 
-        accountFullName.innerHTML = `<i class="fa-solid fa-user text-whiite md:text-neutral-500"></i> ${parsedData.fullName}`;
-        accountEmail.innerHTML = `<i class="fa-solid fa-envelope text-white md:text-neutral-500"></i> ${parsedData.email}`;
+        accountFullName.innerHTML = `<i class="fa-solid fa-user text-whiite md:text-[#FEFE00]"></i> ${parsedData.fullName}`;
+        accountEmail.innerHTML = `<i class="fa-solid fa-envelope text-white md:text-[#FEFE00]"></i> ${parsedData.email}`;
 
         userFullName.innerHTML = parsedData.fullName
         userEmail.innerHTML = parsedData.email
@@ -88,6 +88,8 @@ function displayNotReadyError(event){
 const fileInput = document.getElementById('file-upload');
 const profileImg = document.querySelector('.dp');
 
+let photoUploadSuccess = document.getElementById('photoUploadSuccess')
+
 fileInput.addEventListener('change', function () {
     const file = this.files[0];
     if (file) {
@@ -95,6 +97,13 @@ fileInput.addEventListener('change', function () {
         reader.onload = function (e) {
             let newDp = e.target.result;
             profileImg.src = newDp;
+            photoUploadSuccess.classList.remove('opacity-0');
+            photoUploadSuccess.innerHTML = '<i class="fa-solid fa-circle-check text-[]"></i> Profile Photo Updated';
+
+            setTimeout(() => {
+                photoUploadSuccess.classList.add('opacity-0');
+                photoUploadSuccess.innerText = '';
+            }, 3000);
             localStorage.setItem('newdp', newDp);
         };
         reader.readAsDataURL(file);

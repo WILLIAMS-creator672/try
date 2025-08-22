@@ -224,7 +224,11 @@ getStartedButton.addEventListener('click', () => {
 
 });
 
-navBrigadeShopLink.addEventListener('click', (event) => {
+navBrigadeShopLink.addEventListener('click', showComingSoon)
+
+headerHelpLink.addEventListener('click', showComingSoon)
+
+function showComingSoon(event){
     event.preventDefault()
     getStartedError.classList.remove('opacity-0');
     getStartedError.innerHTML = '<i class="fa-solid fa-circle-exclamation"></i> Coming Soon.....';
@@ -233,20 +237,7 @@ navBrigadeShopLink.addEventListener('click', (event) => {
         getStartedError.classList.add('opacity-0');
         getStartedError.innerText = '';
     }, 3000);
-
-})
-
-headerHelpLink.addEventListener('click', (event) => {
-    event.preventDefault()
-    getStartedError.classList.remove('opacity-0');
-    getStartedError.innerHTML = '<i class="fa-solid fa-circle-exclamation"></i> Coming Soon.....';
-
-    setTimeout(() => {
-        getStartedError.classList.add('opacity-0');
-        getStartedError.innerText = '';
-    }, 3000);
-
-})
+}
 
 
 

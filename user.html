@@ -33,7 +33,7 @@
 
 
             <div
-                class="box-shadow padding border flex flex-col md:flex-row items-center justify-around gap-[20px] md:gap-[5px] rounded-[10px]">
+                class="box-shadow padding border flex flex-col md:flex-row items-center justify-around gap-[20px] md:gap-[5px] rounded-[10px] account-card-bg">
 
             <div class="flex flex-col gap-[10px] items-center">
                     <div class="dp-card" id="dp-card">
@@ -52,9 +52,9 @@
 
                 <div
                     class="flex flex-col items-center rounded-[10px] text-white md:text-black gap-[5px] md:gap-[10px] bg-[#162556] md:bg-transparent w-full md:w-fit p-[5px]">
-                    <p id="accountFullName" class="font-bold text-[18px] md:text-[22px]"></p>
+                    <p id="accountFullName" class="font-bold text-[18px] md:text-[22px] text-white"></p>
 
-                    <p id="accountEmail"></p>
+                    <p id="accountEmail" class="text-white"></p>
                 </div>
             </div>
 
@@ -129,6 +129,9 @@
     <!-- ERRORS -->
 
     <p id="notReadyError" class="notReadyErrModal opacity-0 text-[15px] md:text-[18px]"></p>
+
+    <p id="photoUploadSuccess" class="photoUploadSuccesModal opacity-0 text-[15px] md:text-[18px]"></p>
+
 
 
     <!-- OVERLAYS -->
